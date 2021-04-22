@@ -60,7 +60,7 @@ Game.sound = (function() {
             changeVolume("background", 2);
 
             sounds['shot'] = loadSound('audio/shot.mp3');
-            changeVolume("shot", 10);
+            changeVolume("shot", 5);
 
             sounds['dive'] = loadSound('audio/dive.mp3');
             changeVolume("dive", 10);

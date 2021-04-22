@@ -49,7 +49,9 @@ Game.model = (function(components, graphics, input, sound, screens) {
             fill: 'rgba(200, 200, 200, 1)',
             stroke: 'rgba(0, 0, 0, 1)',
         };
-
+    function isPlaying(){
+        return internalUpdate == updatePlaying;
+    }
     function initializePlayer() {
         let img = new Image();
         // img.src = "static/Fighter.png";
@@ -74,7 +76,7 @@ Game.model = (function(components, graphics, input, sound, screens) {
             keyboard.registerCommand(Game.controlMap['left'], player.moveLeft);
             keyboard.registerCommand(Game.controlMap['right'], player.moveRight);
             keyboard.registerCommand(Game.controlMap['fire'], function(){
-                if(player.isPlaying() && internalUpdate == updatePlaying){
+                if(player.isPlaying() && isPlaying()){
                     fire.firePlayer(player.pos);
                 }
             })
@@ -101,7 +103,7 @@ Game.model = (function(components, graphics, input, sound, screens) {
     }
 
     function playIntro(elapsedTime){
-        sound.play("intro");
+        sound.play("intro", true);
         internalUpdate = updateCountdown;
     }
 
@@ -325,6 +327,7 @@ Game.model = (function(components, graphics, input, sound, screens) {
     }
 
     return {
+        isPlaying: isPlaying,
         initialize: initialize,
         processInput: processInput,
         update: update,

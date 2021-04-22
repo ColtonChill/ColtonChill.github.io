@@ -6,7 +6,8 @@ GalagaAI = function(end){
         enemies,
         fire;
     let attack = function(){
-        if(player.isPlaying()){
+        console.log(Game.model.isPlaying());
+        if(player.isPlaying() && Game.model.isPlaying()){
             fire.firePlayer(player.pos);
         }
     };
@@ -38,9 +39,9 @@ GalagaAI = function(end){
             if(300>dist(player.pos,bullet.pos)){
                 let angle = direction(player.pos,bullet.pos);
                 if(angle>Math.PI/2 || angle<-Math.PI/2){
-                    player.moveLeft(elapsedTime);
-                }else{
                     player.moveRight(elapsedTime);
+                }else{
+                    player.moveLeft(elapsedTime);
                 }
                 return true;
             }
@@ -56,9 +57,9 @@ GalagaAI = function(end){
                     if(200>dist(player.pos,enemy.pos)){
                         let angle = direction(player.pos,enemy.pos);
                         if(angle>Math.PI/2 || angle<-Math.PI/2){
-                            player.moveLeft(elapsedTime);
-                        }else{
                             player.moveRight(elapsedTime);
+                        }else{
+                            player.moveLeft(elapsedTime);
                         }
                         return true;
                     }
