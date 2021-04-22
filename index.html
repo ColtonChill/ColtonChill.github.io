@@ -7,7 +7,8 @@
 </head>
 
 
-<body onload = "Game.main.initialize();">
+<!-- <body onload = "Game.main.initialize();"> -->
+<body>
     <div id = "main">
 
         <div id = "main-menu" class = "screen">
@@ -62,17 +63,10 @@
 
     </div>
 
-    <script> 
-        let Game = {
-            screens : {},
-            input: {},
-            controlMap: {fire:'', left:'', right:''},
-            render: []
-        };
-    </script>
-    <script src = "scripts/util.js"></script>
-    <script src = "scripts/sound.js"></script>
-    <!-- <script src = 'scripts/controls.js'></script> -->
+    <script data-main = "scripts/loader" src = "scripts/require.js"></script>
+    
+    <!-- <script src="scripts/util.js"></script>
+    <script src="scripts/sound.js"></script>
     <script src="scripts/controls/input.js"></script>
     <script src="scripts/render/graphics.js"></script>
     <script src="scripts/render/particleSystem.js"></script>
@@ -88,7 +82,7 @@
     <script src="scripts/screens/mainMenu.js"></script>
     <script src="scripts/screens/highScore.js"></script>
     <script src="scripts/screens/pause.js"></script>
-    <script src="scripts/screens/credits.js"></script>
+    <script src="scripts/screens/credits.js"></script> -->
 
 
 

@@ -9,7 +9,6 @@ Game.screens['game-screen'] = (function(gameModel, main, graphics, input, sound)
         gameModel.initialize();
         keyboard.registerCommand("Escape", function() {
             cancelNextRequest = true;
-            console.log("CHECKPOINT")
             main.showScreen('pause');
         });
     }

@@ -57,31 +57,31 @@ Game.sound = (function() {
         function loadAudio() {
             sounds['background'] = loadSound('audio/PurpleHaze-Trim.mp3');
             sounds['background'].loop = true;
-            changeVolume("background", 2);
+            changeVolume("background", 1);
 
             sounds['shot'] = loadSound('audio/shot.mp3');
-            changeVolume("shot", 5);
+            changeVolume("shot", 1);
 
             sounds['dive'] = loadSound('audio/dive.mp3');
-            changeVolume("dive", 10);
+            changeVolume("dive", 2);
 
             sounds['player-boom'] = loadSound('audio/player_boom.mp3');
-            changeVolume("player-boom", 10);
+            changeVolume("player-boom", 5);
 
             sounds['enemy-boom'] = loadSound('audio/enemy_boom.mp3');
-            changeVolume("enemy-boom", 10);
+            changeVolume("enemy-boom", 2);
 
             sounds['intro'] = loadSound('audio/stage_intro.mp3');
-            changeVolume("intro", 10);
+            changeVolume("intro", 2);
 
             sounds['stage'] = loadSound('audio/stage.mp3');
-            changeVolume("stage", 10);
+            changeVolume("stage", 5);
 
             sounds['challenge'] = loadSound('audio/challenging_stage.mp3');
-            changeVolume("challenge", 10);
+            changeVolume("challenge", 2);
 
             sounds['challenge-over'] = loadSound('audio/challenging_stage_over.mp3');
-            changeVolume("challenge-over", 10);
+            changeVolume("challenge-over", 2);
 
             // Game.sounds['audio/bensound-extremeaction'] = loadSound('audio/bensound-extremeaction.mp3', 'Music', 'id-play3');
         }

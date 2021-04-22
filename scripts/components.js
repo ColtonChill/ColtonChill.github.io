@@ -264,12 +264,11 @@ Game.components = (function(graphics, sound){
         that.collideBullet = function(bullet) {
             if(spec.hitbox>dist(bullet.pos, spec.pos)){
                 spec.health--;
-                if(spec.type == "boss"){
-                    spec.imgNames.splice(0,2);
-                    spec.img.src = spec.imgNames[1];
-                }
                 if(spec.health<=0){ 
                     that.goBoom();
+                }else if(spec.type == "boss"){
+                    spec.img.src = spec.imgNames[3];
+                    spec.imgNames.splice(0,2);
                 }
                 global.hitsOverall++;
                 return true;

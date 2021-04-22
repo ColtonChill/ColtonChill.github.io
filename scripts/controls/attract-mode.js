@@ -6,7 +6,6 @@ GalagaAI = function(end){
         enemies,
         fire;
     let attack = function(){
-        console.log(Game.model.isPlaying());
         if(player.isPlaying() && Game.model.isPlaying()){
             fire.firePlayer(player.pos);
         }
